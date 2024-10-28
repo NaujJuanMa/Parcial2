@@ -12,14 +12,12 @@ public class Cliente {
         this.productosComprados = new ArrayList<>();
     }
 
-    // Método para comprar un producto
     public void comprarProducto(Vendible producto, int cantidad) {
         double precioVenta = producto.calcularPrecioVenta(cantidad);
         System.out.println("Comprando " + cantidad + " unidades de " + ((Producto) producto).getNombre() + " por un total de: $" + precioVenta);
         productosComprados.add(producto);
     }
 
-    // Método para mostrar los detalles de la compra
     public void mostrarCompra() {
         double costoTotal = 0;
         System.out.println("Detalles de la compra de " + nombre + ":");
@@ -31,7 +29,6 @@ public class Cliente {
         System.out.println("Costo total de la compra: $" + costoTotal);
     }
 
-    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
